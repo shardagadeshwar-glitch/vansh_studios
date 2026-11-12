@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060709;
+  --foreground: #F5E6BE;
+  --obsidian: #060709;
+  --gold-primary: #D4AF37;
+  --gold-light: #F5E6BE;
+  --gold-dark: #AA7C11;
+  --graphite: #181B22;
+}
+
+@theme {
+  --font-heading: var(--font-heading), system-ui, sans-serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --color-obsidian: #060709;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F5E6BE;
+  --color-gold-dark: #AA7C11;
+  --color-graphite: #181B22;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+}
+
+::selection {
+  background-color: #D4AF37;
+  color: #060709;
+}
+
+/* Luxury Gold Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF6D6 0%, #D4AF37 50%, #996515 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Gold Metallic Button */
+.gold-btn {
+  background: linear-gradient(135deg, #F5E6BE 0%, #D4AF37 50%, #AA7C11 100%);
+  color: #060709;
+  font-weight: 800;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+  transition: all 0.3s ease;
+}
+
+.gold-btn:hover {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Classic Luxury Obsidian & Gold Glass Panel */
+.gold-card {
+  background: rgba(10, 12, 16, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.gold-card:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Reduced-motion accessibility standard */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
